@@ -11,8 +11,8 @@ function setup() {
   button.mousePressed(newGame);
 
   flags = createP();
-  flags.style('30px');
-  flags.position(120, height);
+  flags.style('font-size', '30px');
+  flags.position(120, height - 20);
 
   loop();
   grid = new Grid(10, 10);
@@ -26,7 +26,9 @@ function draw() {
 }
 
 function mousePressed() {
-  grid.handleMouse();
+  if (!isNaN(parseInt(flags.html()))) {
+    grid.handleMouse();
+  }
 }
 
 function newGame() {

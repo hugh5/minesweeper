@@ -139,6 +139,7 @@ class Grid {
           this.grid[p.y][p.x].setShowing();
         }
       }
+      flags.html("You Lost");
       noLoop();
     }
   
